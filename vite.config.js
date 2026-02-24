@@ -7,10 +7,6 @@ export default defineConfig({
   base: '/', // Set your desired base path here
   plugins: [
     tailwindcss(),
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']], 
-      },
-    }),
+    react()
   ],
 })
