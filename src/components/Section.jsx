@@ -6,5 +6,6 @@ export function TwoPanelSection({leftContent, rightContent, leftBigger}){
            <div className={"w-full m-auto " +leftProportion}>{leftContent}</div> 
            <div className={"w-full m-auto " +rightProportion}>{rightContent}</div>
        </div>
+       
     )
 }
