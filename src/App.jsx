@@ -5,8 +5,8 @@ function App() {
   
   const hamptonUrl = "https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=CHABRHX&groupCode=CHH90T&arrivaldate=2026-09-04&departuredate=2026-09-06&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT";
   return (
-    <div className="w-full m-auto bg font-">
-      <div className="flex flex-col w-full m-auto justify-center">
+    <div className="w-full m-auto bg-[url('/websitebg.jpeg')] bg-w-screen bg-cover">
+      <div className="flex flex-col w-full m-auto justify-center pt-[30%] text-white">
         <div className="flex m-auto text-3xl"> Larissa & Ivano </div>
         <div className="flex m-auto text-xl"> September 5, 2026 - Elijay, GA</div>
         <button className="text-xl my-2 bg-[#505B32] border-2 border-[#A4AB5C] w-fit px-5 py-2 text-[#D6D8A2] m-auto"><a target="_blank" href="https://forms.gle/YNsd6cj9RvLKqFi19">RSVP</a></button>
