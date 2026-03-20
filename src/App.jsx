@@ -156,7 +156,7 @@ function App() {
               >
                 <div className="flex flex-col gap-1">
                   <p className="uppercase tracking-widest text-s" style={s.label}>Places to Stay</p>
-                  <p className="text-s font-medium" style={s.warning}>Book ASAP — this is a holiday weekend!</p>
+                  <p className="text-s font-medium" style={s.warning}>Book ASAP, this is a holiday weekend!</p>
                 </div>
 
                 {/* Room Block — accent card */}
