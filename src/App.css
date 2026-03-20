@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 @import "tailwindcss";
 html {
-    scroll-behavior: smooth;
-
-}
-body { 
-    font-family: 'Oranienbaum', serif;
-    min-height: 100%;
-    min-height: -webkit-fill-available;
     background-color: #BCB196;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
     background-image: url('/websitebg.jpeg');
     background-repeat: repeat;
     background-position: top;
     background-size: 150% auto;
-    background-origin: border-box;
-
-}
-
-@media (min-width: 768px) {
-    body {
+    scroll-behavior: smooth;
+  }
+  
+  body { 
+    font-family: 'Oranienbaum', serif;
+    min-height: 100vh;
+    background: transparent;
+  }
+  
+  @media (min-width: 768px) {
+    html {
       background-size: cover;
     }
   }
