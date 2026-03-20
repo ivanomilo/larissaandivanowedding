@@ -55,10 +55,10 @@ function App() {
         <div className="relative flex flex-col w-fit m-auto p-15 rounded-full  bg-black"
           style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, transparent 70%)' }}>
         {/* Hero title */}
-        <div className="flex m-auto text-3xl font-semibold tracking-wide" style={s.heroTitle}>
+        <div className="flex m-auto text-3xl font-semibold tracking-wide text-center" style={s.heroTitle}>
           Larissa &amp; Ivano
         </div>
-        <div className="flex m-auto text-xl mt-1 font-light" style={s.heroSub}>
+        <div className="flex m-auto text-xl mt-1 font-light text-center" style={s.heroSub}>
           September 5, 2026 — Ellijay, GA
         </div>
 
@@ -74,11 +74,11 @@ function App() {
 
         {/* Nav */}
         <div className="flex flex-row justify-between w-full">
-          <div className="flex flex-row m-auto gap-1">
-            <a href="#where" className="mx-2 text-lg underline underline-offset-4" style={s.navLink}>
+          <div className="flex flex-col md:flex-row m-auto gap-1">
+            <a href="#where" className="mx-2 text-lg underline underline-offset-4 text-center" style={s.navLink}>
               Where &amp; When
             </a>
-            <a href="#travel" className="mx-2 text-lg underline underline-offset-4" style={s.navLink}>
+            <a href="#travel" className="mx-2 text-lg underline underline-offset-4 text-center" style={s.navLink}>
               Travel &amp; Accommodations
             </a>
           </div>
