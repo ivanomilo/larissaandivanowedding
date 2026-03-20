@@ -6,4 +6,7 @@ html {
 }
 body { 
     font-family: 'Oranienbaum', serif;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    background-color: #BCB196;
 }

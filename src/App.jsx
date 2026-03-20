@@ -46,7 +46,7 @@ function App() {
   const hamptonUrl = "https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=CHABRHX&groupCode=CHH90T&arrivaldate=2026-09-04&departuredate=2026-09-06&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT";
 
   return (
-    <div className="w-full m-auto bg-[url('/websitebg.jpeg')] bg-top bg-[length:150%_auto] md:bg-cover">
+    <div className="w-full m-auto bg-[url('/websitebg.jpeg')] bg-repeat bg-top bg-[length:150%_auto] md:bg-cover">
 
       {/* Subtle radial overlay so hero text pops */}
 
