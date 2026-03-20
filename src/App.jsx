@@ -16,6 +16,7 @@ const c = {
 
   cardBgAccent: '#697F87',
   overlay:     'radial-gradient(ellipse 70% 50% at 50% 35%, rgba(0,0,0,0.28) 0%, transparent 100%)',
+  shadow: 'text-shadow: 0 0 40px rgba(0,0,0,0.4), 0 0 80px rgba(0,0,0,0.2)'
 }
 
 const s = {
@@ -48,10 +49,11 @@ function App() {
     <div className="w-full m-auto bg-[url('/websitebg.jpeg')] bg-top bg-[length:150%_auto] md:bg-cover">
 
       {/* Subtle radial overlay so hero text pops */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: c.overlay }} />
 
-      <div className="relative flex flex-col w-full m-auto justify-center pt-[20%]">
-
+      <div className="relative flex flex-col w-full m-auto justify-center pt-[20%] md:pt-[20%]">
+      {/* <div className="absolute inset-0 pointer-events-none" style={{ background: c.overlay }} /> */}
+        <div className="relative flex flex-col w-fit m-auto p-15 rounded-full  bg-black"
+          style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, transparent 70%)' }}>
         {/* Hero title */}
         <div className="flex m-auto text-3xl font-semibold tracking-wide" style={s.heroTitle}>
           Larissa &amp; Ivano
@@ -62,7 +64,7 @@ function App() {
 
         {/* RSVP Button */}
         <button
-          className="text-sm my-3 w-fit px-6 py-2 rounded m-auto uppercase tracking-widest transition-colors"
+          className="text-md my-3 w-fit px-6 py-2 rounded m-auto uppercase tracking-widest transition-colors"
           style={s.button}
           onMouseOver={hover.over}
           onMouseOut={hover.out}
@@ -73,21 +75,21 @@ function App() {
         {/* Nav */}
         <div className="flex flex-row justify-between w-full">
           <div className="flex flex-row m-auto gap-1">
-            <a href="#where" className="m-2 text-sm underline underline-offset-4" style={s.navLink}>
+            <a href="#where" className="mx-2 text-lg underline underline-offset-4" style={s.navLink}>
               Where &amp; When
             </a>
-            <a href="#travel" className="m-2 text-sm underline underline-offset-4" style={s.navLink}>
+            <a href="#travel" className="mx-2 text-lg underline underline-offset-4" style={s.navLink}>
               Travel &amp; Accommodations
             </a>
           </div>
         </div>
-
+        </div>
         {/* Content sections */}
         <div className="md:w-[66%] m-auto">
 
           {/* WHERE & WHEN */}
           <TwoPanelSection
-            className="md: mt-[50%]"
+            className="md:mt-[50%]"
             id="where"
             leftBigger={true}
             leftContent={
@@ -96,24 +98,24 @@ function App() {
                 style={s.card}
               >
                 <div className="flex flex-col gap-1">
-                  <p className="uppercase tracking-widest text-xs" style={s.label}>Location</p>
+                  <p className="uppercase tracking-widest text-s" style={s.label}>Location</p>
                   <p className="text-xl font-semibold" style={s.title}>The Falls at Blue Ridge</p>
-                  <p className="text-sm" style={s.subtitle}>1654 Old Northcutt Rd, Ellijay, GA 30536</p>
+                  <p className="text-md" style={s.subtitle}>1654 Old Northcutt Rd, Ellijay, GA 30536</p>
                 </div>
 
                 <div className="flex items-center gap-3 w-40">
                   <div className="flex-1 h-px" style={s.divider} />
-                  <span className="text-xs" style={s.dividerTxt}>◈</span>
+                  <span className="text-s" style={s.dividerTxt}>◈</span>
                   <div className="flex-1 h-px" style={s.divider} />
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <p className="uppercase tracking-widest text-xs" style={s.label}>Date</p>
+                  <p className="uppercase tracking-widest text-s" style={s.label}>Date</p>
                   <p className="text-xl font-semibold" style={s.title}>Saturday, September 5, 2026</p>
                 </div>
 
                 <div className="flex flex-col gap-3 w-full max-w-xs">
-                  <p className="uppercase tracking-widest text-xs" style={s.label}>Schedule</p>
+                  <p className="uppercase tracking-widest text-s" style={s.label}>Schedule</p>
                   {[
                     { label: "Arrive By",          time: "4:15 – 4:45 PM"  },
                     { label: "Ceremony",            time: "5:00 – 5:30 PM"  },
@@ -121,8 +123,8 @@ function App() {
                     { label: "Dinner & Reception",  time: "6:30 – 11:00 PM" },
                   ].map(({ label, time }) => (
                     <div key={label} className="flex justify-between items-center pb-2" style={s.rowBorder}>
-                      <span className="text-sm font-medium" style={s.title}>{label}</span>
-                      <span className="text-xs tracking-wide" style={s.subtitle}>{time}</span>
+                      <span className="text-md font-medium" style={s.title}>{label}</span>
+                      <span className="text-s tracking-wide" style={s.subtitle}>{time}</span>
                     </div>
                   ))}
                 </div>
@@ -136,7 +138,7 @@ function App() {
             leftBigger={false}
             rightContent={
               <div className="flex flex-col items-center text-center gap-2 py-4 rounded-lg p-6" style={s.card}>
-                <p className="uppercase tracking-widest text-xs" style={s.label}>Dress Code</p>
+                <p className="uppercase tracking-widest text-s" style={s.label}>Dress Code</p>
                 <p className="text-xl font-semibold" style={s.title}>Garden Cocktail</p>
               </div>
             }
@@ -153,21 +155,21 @@ function App() {
                 style={s.card}
               >
                 <div className="flex flex-col gap-1">
-                  <p className="uppercase tracking-widest text-xs" style={s.label}>Places to Stay</p>
-                  <p className="text-xs font-medium" style={s.warning}>Book ASAP — this is a holiday weekend!</p>
+                  <p className="uppercase tracking-widest text-s" style={s.label}>Places to Stay</p>
+                  <p className="text-s font-medium" style={s.warning}>Book ASAP — this is a holiday weekend!</p>
                 </div>
 
                 {/* Room Block — accent card */}
                 <div className="flex flex-col gap-2 w-full max-w-xs rounded-lg p-4" style={s.cardAccent}>
-                  <p className="uppercase tracking-widest text-xs" style={s.textLight}>Room Block</p>
-                  <p className="text-lg font-semibold" style={{ color: c.textLight }}>Hampton Inn Blue Ridge</p>
-                  <p className="text-sm" style={{ color: c.textSubtle }}>50 West Main Street, Blue Ridge, GA 30513</p>
-                  <p className="text-sm" style={{ color: c.textSubtle }}>706.642.9001</p>
+                  <p className="uppercase tracking-widest text-s" style={s.textLight}>Room Block</p>
+                  <p className="text-xl font-semibold" style={{ color: c.textLight }}>Hampton Inn Blue Ridge</p>
+                  <p className="text-md" style={{ color: c.textSubtle }}>50 West Main Street, Blue Ridge, GA 30513</p>
+                  <p className="text-md" style={{ color: c.textSubtle }}><a href="tel:+1-706-642-9001">706.642.9001</a></p>
                   <a
                     href={hamptonUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-xs uppercase tracking-widest py-2 px-4 rounded transition-colors"
+                    className="mt-1 inline-block text-s uppercase tracking-widest py-2 px-4 rounded transition-colors"
                     style={s.button}
                     onMouseOver={hover.over}
                     onMouseOut={hover.out}
@@ -178,18 +180,18 @@ function App() {
 
                 <div className="flex items-center gap-3 w-40">
                   <div className="flex-1 h-px" style={s.divider} />
-                  <span className="text-xs" style={s.dividerTxt}>◈</span>
+                  <span className="text-s" style={s.dividerTxt}>◈</span>
                   <div className="flex-1 h-px" style={s.divider} />
                 </div>
 
                 <div className="flex flex-col gap-3 w-full max-w-xs">
-                  <p className="uppercase tracking-widest text-xs" style={s.label}>Other Options</p>
+                  <p className="uppercase tracking-widest text-s" style={s.label}>Other Options</p>
                   {[
                     { name: "Blue Ridge Inn Bed and Breakfast",  url: "https://blueridgeinnbandb.com" },
                     { name: "Comfort Inn and Suites Blue Ridge", url: "https://www.reservationdesk.com/hotel/602a4a1/the-blue-ridge-lodge-by-comfort-inn-suites-blue-ridge-ga/" },
                     { name: "Blue Sky Cabin Rentals",            url: "https://www.blueskycabinrentals.com" },
                   ].map((place) => (
-                    <div key={place.name} className="pb-2 text-sm" style={s.rowBorder}>
+                    <div key={place.name} className="pb-2 text-md" style={s.rowBorder}>
                       <a href={place.url} target="_blank" style={s.link}>{place.name}</a>
                     </div>
                   ))}
@@ -206,7 +208,7 @@ function App() {
             rightContent={
               <div className="flex flex-col items-center text-center gap-2 py-4 rounded-lg p-6" style={s.card}>
                 <button
-                  className="text-sm uppercase tracking-widest w-fit px-6 py-2 transition-colors"
+                  className="text-md uppercase tracking-widest w-fit px-6 py-2 transition-colors"
                   style={s.button}
                   onMouseOver={hover.over}
                   onMouseOut={hover.out}
