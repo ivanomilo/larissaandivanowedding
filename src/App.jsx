@@ -90,7 +90,7 @@ function App() {
 
           {/* WHERE & WHEN */}
           <TwoPanelSection
-            className="md:mt-[50%]"
+            className="mt-[0%] md:mt-[40%]"
             id="where"
             leftBigger={true}
             leftContent={
@@ -214,7 +214,7 @@ function App() {
                   onMouseOver={hover.over}
                   onMouseOut={hover.out}
                 >
-                  Registry
+                  <a target="_blank" href="https://registry.theknot.com/--january-2026-ga/69282104">Registry</a>
                 </button>
               </div>
             }
