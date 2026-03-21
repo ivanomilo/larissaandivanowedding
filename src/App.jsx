@@ -207,9 +207,9 @@ function App() {
             leftBigger={false}
             leftContent={<></>}
             rightContent={
-              <div className="flex flex-col items-center text-center gap-2 py-4 rounded-lg p-6" style={s.card}>
+              <div className="flex flex-col items-center text-center gap-2 py-4 rounded-lg p-6" >
                 <button
-                  className="text-md uppercase tracking-widest w-fit px-6 py-2 transition-colors"
+                  className="text-md uppercase tracking-widest w-fit px-6 py-2 transition-colors rounded-sm"
                   style={s.button}
                   onMouseOver={hover.over}
                   onMouseOut={hover.out}
