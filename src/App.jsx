@@ -64,14 +64,16 @@ function App() {
         </div>
 
         {/* RSVP Button */}
-        <button
+        <a
           className="text-md my-3 w-fit px-6 py-2 rounded m-auto uppercase tracking-widest transition-colors"
           style={s.button}
           onMouseOver={hover.over}
           onMouseOut={hover.out}
+          href="https://forms.gle/YNsd6cj9RvLKqFi19"
+          target="_blank"
         >
-          <a target="_blank" href="https://forms.gle/YNsd6cj9RvLKqFi19">RSVP</a>
-        </button>
+          RSVP
+        </a>
 
         {/* Nav */}
         <div className="flex flex-row justify-between w-full">
@@ -208,14 +210,16 @@ function App() {
             leftContent={<></>}
             rightContent={
               <div className="flex flex-col items-center text-center gap-2 py-4 rounded-lg p-6" >
-                <button
+                <a
                   className="text-md uppercase tracking-widest w-fit px-6 py-2 transition-colors rounded-sm"
                   style={s.button}
                   onMouseOver={hover.over}
                   onMouseOut={hover.out}
+                  href="https://registry.theknot.com/--january-2026-ga/69282104"
+                  target="_blank"
                 >
-                  <a target="_blank" href="https://registry.theknot.com/--january-2026-ga/69282104">Registry</a>
-                </button>
+                  Registry
+                </a>
               </div>
             }
           />
